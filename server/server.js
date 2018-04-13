@@ -1,16 +1,4 @@
-var env = process.env.NODE_ENV || 'development';
-
-if(env === 'development'){
-  process.env.PORT = 3000;
-  process.env.MONGODB_URI =  'mongodb://localhost:27017/TodoApp';
-}else if(env === 'test'){
-  process.env.PORT = 3000;
-  process.env.MONGODB_URI =  'mongodb://localhost:27017/TodoAppTest';
-}else if(env === 'production'){
-  process.env.MONGODB_URI =  'mongodb://JoZapata:Conviction007@ds143039.mlab.com:43039/todoapp';
-}
-
-
+require('./config/config');
 
 const _ = require('lodash');
 const express = require('express');
